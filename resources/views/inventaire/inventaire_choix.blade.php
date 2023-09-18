@@ -96,7 +96,7 @@
             <!----> 
             <div class="card card-body ">
               
-               <form method="post"  action="{{route('choix_inventaires')}}"> 
+               <form method="post"  action="{{route('choix_inventaires')}}"style=" margin-left:35%;"> 
                 @csrf
                 
 
@@ -105,12 +105,12 @@
 
                <table>
                   <tr>
-                     <td>
+                     <td style="font-size: 15px;">
                      l'inventaire :
                      </td>
-                     <td>
-                        <select name="choix_inventaire" id=""  class="form-select">
-                           <option value="">Selectionner</option>
+                     <td >
+                        <select  style="font-size: 15px;" name="choix_inventaire" id=""  class="form-select">
+                           <option value=""  >Selectionner</option>
                            @foreach ($inventaires as $inventaire)
                            <option value="{{$inventaire->id}}">{{$inventaire->nom}}</option>  
                            @endforeach
@@ -123,7 +123,7 @@
            
                
                   
-                  <button type="submit" class="btn btn-info  ">Valider</button>
+                  <button style=" margin-left:60px;font-size: 15px;" type="submit" class="btn btn-info  ">Valider</button>
              
                </div>
               </form>

@@ -105,7 +105,12 @@
                         <th scope="col">{{$field_inventaire->nom_champs}} </th>
                        
                         @endforeach
+
+                        @if (Auth::user()->hasPermissionTo('Supprimer de inventaire')) 
+
                         <th scope="col"> Action </th>
+
+                        @endif
                      </tr>
                   </thead>
                   <tbody>
@@ -114,7 +119,6 @@
                         <?php for($n=0;$n<count($array_table_inventaires[$i]['field_inventaires']);$n++){ ?>
                         <td> <?php echo $array_table_inventaires[$i]['field_inventaires'][$n] ?> </td>
                         <?php } ?>
-
                         
                         @if (Auth::user()->hasPermissionTo('Supprimer de inventaire')) 
 

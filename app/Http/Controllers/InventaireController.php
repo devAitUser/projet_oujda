@@ -168,9 +168,9 @@ class InventaireController extends Controller
 
             $user = Auth::user();
 
-            $table_inventaires = Inventaire_table::where(["id_organigrammes" => $user->id_inventaire ])->get();
+            $table_inventaires = Inventaire_table::where(["id_organigrammes" => $user->id_choix_inventaire ])->get();
 
-            $name_inventaire   =  Organigramme::find($user->id_inventaire);
+            $name_inventaire   =  Organigramme::find($user->id_choix_inventaire);
             $name_inventaire   =   $name_inventaire->nom;
 
             $data = array( 'inventaires' => $table_inventaires, 'name_inventaire' => $name_inventaire );
@@ -269,5 +269,16 @@ class InventaireController extends Controller
         );
 
         return view("selectionner_entite_inventaire", $data);
+    }
+    public function api_choix_entite_inventaire(Request $request){
+
+
+        $user = Auth::user();
+        $up_choix = User::find($user->id);
+        $up_choix->id_choix_inventaire = $request->projet_user;
+        $up_choix->save(); 
+
+        return true ; 
+
     }
 }

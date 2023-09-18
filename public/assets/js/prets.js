@@ -254,7 +254,6 @@ $('#organigramme_table').dataTable( {
     },
     order: [[0, 'desc']],
     "columns": [
-        { "data": "id"  },
         { "data": "created_at"  },
         { "data": "user"  },
         { "data": "division"  },

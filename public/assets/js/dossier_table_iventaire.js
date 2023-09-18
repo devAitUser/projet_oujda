@@ -40,18 +40,9 @@ $(document).ready(function() {
           {
             extend: 'excel',
             title: "l'inventaire",
-            exportOptions: {
-              columns: [ 0, 1]
-            },
+           
           },
-          {
-            extend: 'pdf',
-            title: "l'inventaire",
           
-            exportOptions: {
-              columns: ':not(:last-child)',
-            }
-          }
         ]
     });
 

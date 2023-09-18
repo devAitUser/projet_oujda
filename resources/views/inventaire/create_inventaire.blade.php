@@ -75,6 +75,10 @@
         .block_select {
          display: flex;
       }
+
+      div#table_wrapper {
+         overflow: auto;
+      }
 </style>
 
 

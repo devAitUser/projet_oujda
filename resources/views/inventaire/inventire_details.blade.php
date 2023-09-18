@@ -60,7 +60,6 @@
             <table id="organigramme_table" class=" table table-bordered text-center styled-table">
                <thead>
                    <tr>
-                       <th scope="col">Numero</th>
                        <th scope="col">Nom</th>
                       
                        <th scope="col">Action  </th>
@@ -73,7 +72,6 @@
                <tbody>
 
                    <tr>
-                       <th scope="row"></th>
 
 
 

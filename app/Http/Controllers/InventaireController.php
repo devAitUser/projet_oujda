@@ -196,10 +196,11 @@ class InventaireController extends Controller
             }
         }
 
-
         return $request->all();
 
     }
+
+
     public function delete_value_field(Request $request){
       
         $Field_table_inventaire_delete = Field_inventaire::find($request->items_delete);

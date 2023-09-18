@@ -72,7 +72,6 @@
             <table id="organigramme_table" class=" table table-bordered text-center styled-table">
                <thead>
                    <tr>
-                       <th scope="col">id</th>
                        <th scope="col">Date</th>
                        <th scope="col">Nom d'utilisateur</th>
                        <th scope="col">Division</th>
@@ -88,7 +87,6 @@
                <tbody>
 
                    <tr>
-                       <th scope="row"></th>
 
 
 

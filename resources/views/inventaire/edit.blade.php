@@ -65,7 +65,7 @@
 
           <div class="row">
             <div class="col-md-12 panel_add">
-              <h3 align="center">Ajouter les champs</h3>
+              <h3 style="text-align: center;"> Ajouter les champs</h3>
               <br>
   
   

@@ -270,6 +270,9 @@ Route::post('/choix_inventaires', [App\Http\Controllers\InventaireController::cl
 
 Route::get('/selectionner_entite_inventaire', [App\Http\Controllers\InventaireController::class, 'selectionner_entite_inventaire'])->name('selectionner_entite_inventaire');
 
+
+Route::post('/api_choix_entite_inventaire', [App\Http\Controllers\InventaireController::class, 'api_choix_entite_inventaire'])->name('selectionner_entite_inventaire');
+
 /** gestion physique */
 
 

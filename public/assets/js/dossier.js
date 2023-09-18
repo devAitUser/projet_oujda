@@ -517,27 +517,20 @@ $(document).ready(function() {
             }
         });
         $.ajax({
-            url: APP_URL+"/choose_project",
+            url: APP_URL+"/api_choix_entite_inventaire",
             method: "post",
             data: {
                 projet_user: id_division ,
-                id_view: id_view 
+             
             },
             success: function(data) {
 
-              
 
-                switch(id_view) {
-                    case "1":
-                        window.location.href = APP_URL+ "/create_dossier";
-                      break;
-                    case "2":
-                        window.location.href = APP_URL+ "/recherche_dossier";
-                      break;
-                    default:
-                        window.location.href = APP_URL;
-                        break;
-                  }
+              if(data){
+                window.location.href = APP_URL+ "/inventaire_choix";
+              }
+
+             
             
 
                

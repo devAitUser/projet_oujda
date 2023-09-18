@@ -125,7 +125,7 @@ label:last-child input[type=radio] {
 
  
    <div class="table_p">
-   <form  method="post" action="{{url('choose_project')}}"  >
+   <form  method="post" action="{{url('choose_iventaire_projet')}}"  >
             @csrf
       <div class="row">
          

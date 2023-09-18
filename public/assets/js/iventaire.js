@@ -114,45 +114,34 @@ function select_type_rayonnage(){
 }
 
 
-function removeRow_table_champs_add(e,row,id=null) {
 
+
+function removeRow_table_champs_add(e, row, id = null) {
   e.preventDefault();
 
-  document.getElementById("row_" + row).remove();
+  const confirmation = confirm("Êtes-vous sûr de vouloir supprimer cette ligne ?");
 
-
-
+  if (confirmation) {
+    document.getElementById("row_" + row).remove();
 
     $.ajaxSetup({
       headers: {
-          'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
       }
-     });
+    });
 
     $.ajax({
-      url: APP_URL+"/delete_value_field_inventaire",
-      method:"POST",
-      data:{
-        items_delete : row
+      url: APP_URL + "/delete_value_field_inventaire",
+      method: "POST",
+      data: {
+        items_delete: row
       },
-      success:function(data){
-  
-        
-  
-    
-    
-  
+      success: function (data) {
       }
-     })
-
-  
-
-
-
-
-
-
+    });
+  }
 }
+
 
 
 

@@ -115,7 +115,7 @@ function view_organigramme(e,row) {
             },
     
             "columns": [
-                { "data": "id"  },
+           
                 { "data": "nom"  },
           
                 { "data": "id"  , render: function(data, type, row) {

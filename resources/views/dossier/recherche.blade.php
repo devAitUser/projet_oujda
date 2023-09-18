@@ -301,7 +301,7 @@
 
 
          <div class="row pt-3">
-            <div class="col-md-6 text-center d-flex justify-content-center ">  <h3 class="bg-resultas" >Resultas trouve : <span id="count_resultas">0</span>  </h3>  </div>
+            <div class="col-md-6 text-center d-flex justify-content-center ">  <h3 class="bg-resultas" >Résultats trouvés : <span id="count_resultas">0</span>  </h3>  </div>
             <div class="col-md-6"></div>
          </div>
 

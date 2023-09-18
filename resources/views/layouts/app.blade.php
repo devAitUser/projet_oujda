@@ -280,16 +280,18 @@ p.top_header {
                         </a>
                         Accueil
                      </li>
+                     @if (Auth::user()->hasPermissionTo('Gestion physique')) 
 
-                     <li class="icon_menu   {{ request()->is('gestion_physique')  ? 'active' : '' }} ">
-                        <a href="{{route('gestion_physique')}}">
-                        <span class="material-icons">
-                           inventory
-                        </span>
-                        </a>
-                        Gestion physique
-                     </li>
-   
+                        <li class="icon_menu   {{ request()->is('gestion_physique')  ? 'active' : '' }} ">
+                           <a href="{{route('gestion_physique')}}">
+                           <span class="material-icons">
+                              inventory
+                           </span>
+                           </a>
+                           Gestion physique
+                        </li>
+
+                        @endif
 
                      
                      @if (Auth::user()->hasPermissionTo('Gestion des prets') || Auth::user()->hasPermissionTo('demande des prêts')  || Auth::user()->hasPermissionTo('Validation des prêts')  ) 

@@ -115,7 +115,6 @@
     
             "columns": [
 
-                { "data": "id"  },
              
                 { "data": "nom"  },
                

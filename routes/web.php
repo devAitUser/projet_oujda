@@ -29,7 +29,7 @@ Route::get('/', function () {
 
 Route::get('/url_dossier/{id}', function ($id) {
 
-    Session::flash('show_dossier','content');
+     Session::flash('show_dossier','content');
     return redirect("/show_dossier/" . $id);
 
 });
